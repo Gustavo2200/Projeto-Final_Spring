@@ -1,0 +1,20 @@
+# Configurações do Banco de Dados PostgreSQL
+spring:
+  datasource:
+    url: jdbc:postgresql://containers-us-west-84.railway.app:6166/railway
+    username: postgres
+    password: wH9p7Awz9fyAfFejSgXA
+    driver-class-name: org.postgresql.Driver
+
+# Configurações do Hibernate
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+
+# Configurações do Pool de Conexão
+  hikari:
+    connectionTimeout: 20000
+    maximumPoolSize: 5
